@@ -18,6 +18,7 @@ public class LawdFieldSetMapper implements FieldSetMapper<Lawd> {
         lawd.setLawdCd(fieldSet.readString(LAWD_CD));
         lawd.setLawdDong(fieldSet.readString(LAWD_DONG));
         lawd.setExist(fieldSet.readBoolean(EXIST, EXIST_TRUE));
+        System.out.println(lawd.toString());
         return lawd;
     }
 }

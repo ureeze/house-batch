@@ -11,7 +11,7 @@ import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 
 /**
- * 이마트 실거래가 APT를 호출하기 위한 파라미터
+ * 아파트 실거래가 APT를 호출하기 위한 파라미터
  * 1. serviceKey - API를 호출하기 위한 인증키
  * 2. LAWD_CD - 법정동 코드 10자리 중 앞 5자리- 구 지역코드 guLawdCd. 예) 41135
  * 3. DEL_YMD - 거래가 발생한 년월. 예) 202107

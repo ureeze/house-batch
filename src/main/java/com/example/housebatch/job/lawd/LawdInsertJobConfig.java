@@ -66,7 +66,7 @@ public class LawdInsertJobConfig {
     @Bean
     @StepScope
     public ItemWriter<Lawd> lawdItemWriter() {
-        return items -> items.forEach(lawd -> lawdService.upsert(lawd));
+        return items -> items.forEach(lawdService::upsert);
 //        return items -> items.forEach(System.out::println);
     }
 

@@ -18,13 +18,13 @@ spring:
     show-sql: true # debug ??? sql ?? ?? ??
     generate-ddl: false
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
   batch:
     jdbc:
       initialize-schema: always  # Spring Batch ? ??? ? ??? ????? ????? ???? ??? ? ??? ??
 external:
   apartment-api:
-    path: openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTrade
+    path: http://openapi.molit.go.kr:8081/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTrade
     service-key: EKXXMawiSBr1hAcZb425JxdV8sNEk5hlkbPFZsAtGAK%2F2z6j4Ghvs2A8xpcrJ7t5XBE%2BwgLQfxEhCwNhmIaByw%3D%3D
 ---
 spring:
