@@ -38,8 +38,10 @@ public class LawdInsertJobConfig {
 
     @JobScope
     @Bean
-    public Step lawdInsertStep(FlatFileItemReader<Lawd> lawdFileItemReader,
-                               ItemWriter<Lawd> lawdItemWriter) {
+    public Step lawdInsertStep(
+            FlatFileItemReader<Lawd> lawdFileItemReader,
+            ItemWriter<Lawd> lawdItemWriter
+    ) {
         return stepBuilderFactory.get("lawdInsertStep")
                 .<Lawd, Lawd>chunk(1000)
                 .reader(lawdFileItemReader)
@@ -49,8 +51,9 @@ public class LawdInsertJobConfig {
 
     @Bean
     @StepScope
-    public FlatFileItemReader<Lawd> lawdFileItemReader(@Value("#{jobParameters['filePath']}") String filePath) {
-        System.out.println("filePath = " + filePath);
+    public FlatFileItemReader<Lawd> lawdFileItemReader(
+            @Value("#{jobParameters['filePath']}") String filePath
+    ) {
         return new FlatFileItemReaderBuilder<Lawd>()
                 .name("lawdFileItemReader")
                 .delimited()
